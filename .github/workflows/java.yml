@@ -14,10 +14,7 @@ jobs:
 
       # installs things in order to run java
       - name: Install Compiler
-        uses: actions/setup-java
-        with:
-          distribution: temurin
-          java-version: 17
+        run: sudo apt install default-jdk
 
       # install make (usually already installed)
       - name: Install Make
