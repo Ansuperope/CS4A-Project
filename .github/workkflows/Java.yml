@@ -1,7 +1,5 @@
-name: Java
-
 # when to run CI
-on: [push, pull]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -16,7 +14,11 @@ jobs:
 
       # installs things in order to run java
       - name: Install Compiler
-        run: sudo apt install default-jdk
+        run: actions/setup-java
+
+      # install make (usually already installed)
+      - name: Install Make
+        run: sudo apt-get install -y make
 
       # build java
       - name: Build
