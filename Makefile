@@ -1,18 +1,32 @@
 JAVAC = javac
 JAVA  = java
 
+SRC_DIR = project
 MAIN = Main
 
-SOURCES = $(wildcard *.java)
+SOURCES = $(shell find $(SRC_DIR) -name "*.java")
 CLASSES = $(SOURCES:.java=.class)
 
-all: $(CLASSES)
+.PHONY: all run clean docs
 
-%.class: %.java
-	$(JAVAC) $<
+
+all:
+	$(JAVAC) $(SOURCES)
+
 
 run: all
-	$(JAVA) $(MAIN)
+	$(JAVA) -cp $(SRC_DIR) $(MAIN)
 
+# cleans up files
 clean:
-	rm -f *.class
+	rm -f $(CLASSES)
+
+# makes doxygen
+docs:
+	doxygen Doxyfile
+
+# save progress, git commands
+save:
+	git add .
+	git commit -m "$(m)"
+	git push
