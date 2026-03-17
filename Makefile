@@ -28,5 +28,3 @@ docs:
 # save progress, git commands
 save:
 	git add .
-	git commit -m "$(m)"
-	git push
