@@ -1,5 +1,10 @@
+name: Java CI
+
 # when to run CI
 on: [push, pull_request]
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -12,13 +17,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      # installs things in order to run java
-      - name: Install Compiler
-        run: sudo apt install default-jdk
-
-      # install make (usually already installed)
-      - name: Install Make
-        run: sudo apt-get install -y make
+      # setup Java toolchain for compilation
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
 
       # build java
       - name: Build
