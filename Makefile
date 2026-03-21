@@ -2,7 +2,7 @@ JAVAC = javac
 JAVA  = java
 
 SRC_DIR = project
-MAIN = Main
+MAIN = project.Main
 
 SOURCES = $(shell find $(SRC_DIR) -name "*.java")
 CLASSES = $(SOURCES:.java=.class)
@@ -11,11 +11,11 @@ CLASSES = $(SOURCES:.java=.class)
 
 
 all:
-	$(JAVAC) $(SOURCES)
+	$(JAVAC) -d . $(SOURCES)
 
 
 run: all
-	$(JAVA) -cp $(SRC_DIR) $(MAIN)
+	$(JAVA) -cp . $(MAIN)
 
 # cleans up files
 clean:
