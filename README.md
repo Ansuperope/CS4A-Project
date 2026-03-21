@@ -1,7 +1,7 @@
-# Program Overview [![.github/workflows/java.yml](https://github.com/Ansuperope/CS4A-Project/actions/workflows/java.yml/badge.svg)](https://github.com/Ansuperope/CS4A-Project/actions/workflows/java.yml)
+# Program Overview [![.github/workflows/java.yml](https://github.com/Ansuperope/CS4A-Project/actions/workflows/java.yml/badge.svg)](https://github.com/Ansuperope/CS4A-Project/actions/workflows/java.yml) [![Documentation](https://img.shields.io/badge/Documentation-Doxygen-blue?logo=doxygen)](https://ansuperope.github.io/CS4A-Project/)
 
-[Google Doc, more info](https://docs.google.com/document/d/1XH2-u4-GlvPFJOgVdttuj_rKvTQDU--6MGTGuS_OFKM/edit?usp=sharing) [![Documentation](https://img.shields.io/badge/Documentation-Doxygen-blue?logo=doxygen)](https://ansuperope.github.io/CS4A-Project/)
 
+[Google Doc, more info](https://docs.google.com/document/d/1XH2-u4-GlvPFJOgVdttuj_rKvTQDU--6MGTGuS_OFKM/edit?usp=sharing)
 1. Program will have the following devices (derived classes):
     1. oven
     2. alarm clock
