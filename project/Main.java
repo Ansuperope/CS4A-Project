@@ -1,11 +1,16 @@
 /**
- * 
+ *
  */
-import java.util.Scanner;
+// CLASS FILES
+package project;
+
+import project.devices.Oven;
 
 public class Main {
-	public static void main(String[] args) {
-		String name = "John";
-    	System.out.println("Hello " + name);
-	}
+
+    public static void main(String[] args) {
+
+        Oven kitchenOven = new Oven();
+        kitchenOven.deviceName();
+    }
 }
