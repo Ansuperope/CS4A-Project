@@ -12,5 +12,7 @@ public class Main {
 
         Oven kitchenOven = new Oven();
         kitchenOven.deviceName();
+
+        System.out.println("Hello World!");
     }
 }
