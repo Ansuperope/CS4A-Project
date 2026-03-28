@@ -16,7 +16,7 @@ public class Oven extends SmartDevice implements DeviceSound {
         this.temperature = temperature;
     }
 
-    @Override
+    @Override // Stuff
     public void deviceName() {
         System.out.println("Oven: " + getName());
     }
